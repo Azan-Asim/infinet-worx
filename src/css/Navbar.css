@@ -1,0 +1,412 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+  }
+  
+  body {
+    color: #ffffff;
+    background-color: #000000;
+    height: 100vh;
+  }
+  header{
+    padding: 0 4rem 0 4rem;
+   }
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 2rem 6rem 1rem 6rem;
+      position: fixed;
+      top: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 200;
+      transition: background .3s ;
+    }
+    .navbar.scrolled {
+      background: #000000;
+    }
+    .navbar a {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+  }
+  .nav-links{
+    margin-left: 15px;
+  }
+  .navbar a:hover {
+    color: #F48F5D;
+    border-bottom: 1px solid #F48F5D;
+  }
+   
+    .logos {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .logos img{
+      width: 70px; /* Set the desired width */
+      height: 70px; /* Set the desired height */
+      animation: rotate 5s linear infinite; /* Add rotation animation */
+    }
+    /* Existing styles... */
+
+/* Navbar Styling */
+.navbar {
+  
+ 
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7); /* Default background color */
+  z-index: 200;
+  transition: background 0.2s, padding 0.2s, height 0.2s; /* Smooth transitions */
+}
+
+
+.logo {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Center items vertically */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  transition: width 0.3s, height 0.3s; /* Smooth logo resizing */
+  margin-right: 10px; /* Space between logo and company name */
+  animation: rotate 5s linear infinite; /* Add rotation animation */
+}
+
+.company-name {
+  color: #ffffff; /* Company name color */
+  transition: opacity 0.3s; /* Smooth transition for appearance */
+  opacity: 0; /* Hidden by default */
+}
+
+.navbar.scrolled .company-name {
+  opacity: 1; /* Make it visible when scrolled */
+}
+
+
+/* Hide company name by default */
+.company-name {
+  opacity: 0; /* Make it invisible initially */
+}
+.navbar.scrolled {
+  background: #000000; /* Solid black when scrolled */
+ 
+}
+
+/* Additional styling for logo and links */
+.logo img {
+  width: 50px; /* Reduced logo size when scrolled */
+  height: 50px; /* Reduced logo size when scrolled */
+  transition: width 0.3s, height 0.3s; /* Smooth logo resizing */
+}
+.logos img {
+  width: 50px; /* Reduced logo size when scrolled */
+  height: 50px; /* Reduced logo size when scrolled */
+  transition: width 0.3s, height 0.3s; /* Smooth logo resizing */
+  margin: 2rem 4rem 1rem 0rem;
+}
+
+
+
+
+
+/* Button */
+.button {
+  font-size: 1rem;
+  color: white;
+  background-color: #F48F5D;
+  border: 2px solid #F48F5D;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 25px #F48F5D;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.navbar.scrolled .button {
+  padding: 0.5rem 1.2rem; /* Reduced button size when scrolled */
+}
+
+/* The rest of your CSS remains unchanged... */
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+   /* .nav-links{
+    margin-left: 190px;
+   } */
+    .nav-links a {
+      color: #ffffff;
+      margin: 0 ;
+      text-decoration: none;
+    }
+    .navbar .nav-links a {
+      padding: 0.5rem ; /* Optional: more padding for clickable area */
+      font-size: 1rem; /* Adjust font size as needed */
+    }
+    
+    button{
+      margin-left: 40px;
+    }
+    .button {
+        font-size: 1rem;
+        color: white;
+        background-color: #F48F5D;
+        border: 2px solid #F48F5D;
+        padding: 0.8rem 1.6rem;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 0 25px #F48F5D ;
+        transition: background-color 0.5s, color 0.5s;
+        /* font-weight: 300; */
+    }
+    
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 50px #F48F5D;
+    }
+  
+  /* Fullscreen Overlay Menu */
+ /* Fullscreen Overlay Menu */
+.overlay {
+  position: fixed;
+  top: -100%; /* Hidden initially */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column; /* Ensure items stack vertically */
+  align-items: center; /* Center align items */
+  justify-content: center; /* Center content vertically */
+  z-index: 300;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease; /* Smooth transitions */
+  padding: 2rem; /* Add padding for better spacing */
+}
+
+.overlay.active {
+  top: 0;
+  opacity: 1;
+}
+.logos {
+  margin-bottom: 2rem; /* Space below the logo */
+}
+
+.logos {
+  width: 100px; /* Set logo size */
+  height: auto; /* Maintain aspect ratio */
+  animation: rotate 5s linear infinite; /* Add rotation animation */
+}
+.overlay-content {
+  text-align: center;
+  width: 100%; /* Full width for better spacing */
+}
+
+.overlay .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Increased space between links */
+  width: 100%; /* Full width to maintain spacing */
+  padding: 2rem; /* Add padding around the links */
+  margin-right: 60px;
+}
+
+.overlay .nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2rem; /* Consistent larger font size */
+  transition: color 0.3s;
+  padding: 1rem; /* Add padding for clickable area */
+  width: 100%; /* Full width for clickable area */
+  text-align: center; /* Center text */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.overlay .nav-links a:hover {
+  color: #F48F5D;
+  background: rgba(244, 143, 93, 0.3); /* Light background on hover */
+}
+
+/* Button inside overlay */
+.overlay .button {
+  margin-top: 1rem;
+  font-size: 1.2rem; /* Slightly larger font size */
+  color: white;
+  background-color: #F48F5D;
+  border: 2px solid #F48F5D;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 25px #F48F5D;
+  transition: background-color 0.5s, color 0.5s;
+  margin-right: 60px;
+}
+
+.overlay .button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px #F48F5D;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 1.5rem;
+  margin-left: 250px;
+  font-size: 2rem;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #F48F5D;
+}
+
+  /* Toggle Button for Mobile */
+  .toggle-button {
+    display: none; /* Hide toggle button on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+   
+    gap: 5px;
+  }
+  
+  .toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: 0.3s;
+    padding: 2.5px 5px;
+    border-radius: 50px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 320px) {
+    .navbar  {
+      display: none; /* Hide navbar items on mobile */
+    }
+  
+    .toggle-button {
+      display: flex; /* Show toggle button */
+    }
+  
+    .overlay-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 321px) and (max-width: 480px) {
+    .navbar {
+      padding: 1.5rem; /* Maintain larger padding for tablets */
+    }
+  
+    .navbar .nav-links,
+    .navbar .button {
+      display: none; /* Hide navbar items on tablets */
+    }
+  
+    .toggle-button {
+      display: flex; /* Show toggle button */
+      margin-right: 30px;
+    }
+  
+    .overlay-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    .navbar {
+      padding: 1.5rem; /* Maintain larger padding for tablets */
+    }
+  
+    .navbar .nav-links,
+    .navbar .button {
+      display: none; /* Hide navbar items on tablets */
+    }
+  
+    .toggle-button {
+      display: flex; /* Show toggle button */
+    }
+  
+    .overlay-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 900px) {
+    .navbar {
+      padding: 1.5rem; /* Maintain larger padding for tablets */
+    }
+  
+    .navbar .nav-links,
+    .navbar .button {
+      display: none; /* Hide navbar items on tablets */
+    }
+  
+    .toggle-button {
+      display: flex; /* Show toggle button */
+    }
+  
+    .overlay-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 921px) and (max-width: 1200px) {
+    .navbar .nav-links,
+    .navbar .button {
+      display: flex; /* Show navbar items on small laptops and larger */
+    }
+  
+    .toggle-button {
+      display: none; /* Hide toggle button */
+    }
+  
+    .overlay {
+      display: none; /* Ensure overlay does not show on larger screens */
+    }
+  }
+  
+  @media (min-width: 1201px) {
+    .navbar .nav-links,
+    .navbar .button {
+      display: flex; /* Show navbar items on larger screens */
+    }
+  
+    .toggle-button {
+      display: none; /* Hide toggle button */
+    }
+  }
+  

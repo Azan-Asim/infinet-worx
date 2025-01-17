@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Cabin:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     background-color: transparent; 
+    font-family: 'Cabin', sans-serif;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+/* Background video styling */
+.footer {
+    position: relative; /* This allows the absolutely positioned video to be contained within the footer */
+    z-index: 1;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Adjust as needed for your design */
+    padding-top: 180px; /* Ensure this accommodates your layout */
+}
+
+.background-video {
+    position: absolute; /* Change to absolute */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make sure it covers the footer area */
+    height: 100%; /* Adjust if necessary to fit the footer */
+    object-fit: cover;
+    z-index: -1; /* Keep it behind other content */
+    opacity: 0.7; /* Adjust to make the video darker or lighter */
+}
+
+
+
+.footer h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    margin-bottom: 50px;
+    z-index: 100;
+}
+
+.buttons {
+    font-size: 16px;
+    color: #ffffff;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    transition: color 0.3s ease;
+    margin-bottom: 70px;
+}
+
+.buttons:hover {
+    color: #F48F5D;
+}
+
+.buttons::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.buttons:hover::after {
+    width: 10%;
+}
+
+i {
+    margin-left: 10px;
+}
+
+/* Link Row Styling */
+.link-row {
+    display: flex;
+    padding: 10px;
+    margin: 0 4rem 2rem 4rem;
+}
+
+/* Main Links - 60% Width */
+.main-links {
+    width: 70%;
+    display: flex;
+    gap: 4rem;
+    justify-content: space-around;
+}
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    transition: color 0.3s;
+    font-size: 17px;
+}
+
+.link:hover {
+    color: #F48F5D;
+}
+
+/* Social Links - 40% Width */
+.social-links {
+    width: 30%;
+    display: flex;
+    gap: 25px;
+    padding-left: 100px;
+}
+
+.container {
+    display: flex;              
+    align-items: center;        
+    margin-top: 40px;           
+    padding: 2rem 6rem;         
+}
+
+.img {
+    margin-right: 20px;         
+}
+
+.container h1 {
+    font-size: 120px;
+    text-shadow: 0 0 25px #F48F5D;
+}
+
+.img img {
+    height: 200px;              
+    animation-name: slideInFromBottom; 
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.text h1 {
+    margin: 0;                  
+    font-size: 2rem;           
+    display: flex; 
+    text-shadow: 0 0 25px #F48F5D;
+    margin-top: 50px;
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%); 
+        opacity: 0; 
+    }
+    to {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+@media (max-width: 1024px) {
+    .footer h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: 1px solid #F48F5D;
+        margin-bottom: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 4rem;
+        margin-top: 20px;
+    }
+
+    .container h1 {
+        font-size: 4rem;
+    }
+
+    .img img {
+        height: 150px;
+    }
+
+    .link-row {
+       
+        gap: 1rem;
+    }
+
+    .main-links, .social-links {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        border: 1px solid #F48F5D;
+    }
+
+    .container h1 {
+        font-size: 2.5rem;
+        margin-top: 20px;
+    }
+
+    .img img {
+        height: 100px;
+    }
+    .link-row {
+        grid-template-columns: repeat(4, 1fr); /* Two columns on smaller screens */
+        grid-template-rows: repeat(2, 1fr); /* Four rows for eight links */
+        gap: 0;
+        display: grid;
+    }
+
+    .main-links, .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer h1 {
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        border: 1px solid #F48F5D;
+    }
+
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .img img {
+        height: 80px;
+    }
+
+    .main-links, .social-links {
+        gap: 0.5rem;
+    }
+    .link-row {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        grid-template-rows: repeat(4, auto); /* Four rows for eight links */
+        gap: 0;
+}
+}

@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Cabin:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #000000;
+      font-family: 'cabin';
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      /* background: linear-gradient(135deg, #1c1c1c, #005050, #0040b3); */
+      /* display: flex; */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    
+
+    }
+.main-heading {
+    text-align: center; /* Center text within the div */
+   
+  }
+  .main-heading h1 {
+    font-size: 55px;
+    margin: 0; /* Remove default margin */
+    letter-spacing: 2px;
+    font-weight: 200;
+  }
+  .card-container {
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .card {
+    background-color: #222;
+    height: 100vh; 
+    width: 300px; 
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden; 
+    justify-content: center;
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+  }
+  .card-container:hover{
+    transform: scale(1.05);
+  box-shadow: 0 0 25px #F48F5D;
+  }
+  .image-section {
+  flex: 2;
+  height: 100%; /* Ensure it takes full height */
+  display: flex; /* Add display flex */
+  }
+  
+  .image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will ensure the image covers the area */
+  }
+  .text-section {
+    flex: 1; 
+    padding: 10px; /* Padding for text */
+    
+   
+    background-color: black;
+  }
+  .text-section h6{
+  width: 70px;
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0;
+  
+  }
+  .text-section p{
+  margin-top: 20px;
+  line-height: 30px;
+  font-size: 18px;
+  }
+  @keyframes float-higher {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-30px); /* Higher float for second card */
+  }
+  100% {
+      transform: translateY(0);
+  }
+  }
+  
+  /* Animation for the first and third cards */
+  @keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px); /* Standard float */
+  }
+  100% {
+      transform: translateY(0);
+  }
+  }
+  
+  /* Apply animation to second card */
+  .card:nth-child(2) {
+  animation: float-higher 3s ease-in-out infinite; 
+  }
+  
+  
+  .card:nth-child(1),
+  .card:nth-child(3) {
+  animation: float 1.5s ease-in-out infinite;
+  animation-delay: 1.5s; 
+  }
+  
+  .buttons {
+  margin-top: 30px;
+  font-size: 16px; /* Font size for button */
+  color: #ffffff; /* Text color */
+  background: transparent; /* Background color */
+  padding: 10px 20px 10px 0; /* Padding 
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+  text-decoration: none;
+  padding-top: 150px;
+  
+  }
+  
+  .buttons:hover {
+  border-bottom: 1px solid white;
+  }
+  .main-heading {
+    text-align: center; /* Center text within the div */
+    margin-top: 250px;
+  }
+  .main-heading h1 {
+    font-size: 55px;
+    margin: 0; /* Remove default margin */
+    letter-spacing: 2px;
+    font-weight: 200;
+  }
+  .main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 100vh;
+    background-color: black;
+    color: white;
+  }
+  
+  .img1 {
+    margin-left: 100px;
+    display: flex;
+  
+    align-items: center;
+    padding: 0 0rem;
+  }
+  
+  .img1 img {
+    width: 100px;
+    height: auto;
+    animation: rotate 5s linear infinite; /* Add rotation animation */
+  }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .main-heading h1 {
+      font-size: 45px; /* Reduce font size for larger screens */
+    }
+    
+    .card-container {
+      gap: 15px; /* Reduce the gap between cards */
+    }
+  
+    .card {
+      width: 250px; /* Reduce card width for larger screens */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .main-heading h1 {
+      font-size: 35px; /* Further reduce font size for mid-size screens */
+    }
+  
+    .card-container {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: center;    /* Center align cards */
+      margin-top: 50px;      /* Adjust margin for top */
+    }
+  
+    .card {
+      width: 80%; /* Make cards take full width */
+      height: auto; /* Let card height adjust automatically */
+      margin-bottom: 20px; /* Add space between stacked cards */
+    }
+  }
+  
+ /* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .main-heading h1 {
+      font-size: 30px; /* Further reduce font size for smaller screens */
+  }
+
+  .card-container {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: center;    /* Center align cards */
+      margin-top: 50px;      /* Adjust margin for top */
+      width: 100%;            /* Ensure container takes full width */
+  }
+
+  .card {
+      width: 100%;           /* Make each card take full width */
+      height: auto;          /* Let card height adjust automatically */
+      margin-bottom: 20px;   /* Add space between stacked cards */
+  }
+
+  .text-section h6 {
+      font-size: 1.5rem; /* Reduce title size */
+  }
+
+  .text-section p {
+      font-size: 16px; /* Reduce paragraph font size */
+      line-height: 1.4; /* Adjust line height for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading h1 {
+      font-size: 24px; /* Further reduce font size for very small screens */
+  }
+
+  .card-container {
+      flex-direction: column; /* Ensure cards stack vertically */
+      align-items: center;    /* Center align cards */
+      margin-top: 20px;      /* Adjust margin for top */
+      width: 100%;            /* Ensure container takes full width */
+  }
+
+  .card {
+      width: 100%;           /* Make each card take full width */
+      height: auto;          /* Let card height adjust automatically */
+      margin-bottom: 15px;   /* Add space between stacked cards */
+  }
+
+  .text-section h6 {
+      font-size: 1.2rem; /* Further reduce title size */
+  }
+
+  .text-section p {
+      font-size: 14px; /* Further reduce paragraph font size */
+  }
+
+  .buttons {
+      font-size: 14px; /* Adjust button font size */
+      padding: 8px 15px; /* Adjust padding for buttons */
+  }
+}
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .main-heading h1 {
+        font-size: 40px; /* Adjust font size for 1024px screens */
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+        gap: 20px; /* Space between cards */
+        justify-items: center;
+        margin: 0 auto; /* Center container */
+        padding: 0 20px; /* Equal left and right margins */
+    }
+
+    .card {
+        width: 100%; /* Each card fills its grid column */
+        max-width: 450px; /* Max width to keep images visible at 1024px */
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .image-section {
+        flex: 2;
+        height: auto; /* Let the image section height adapt */
+        display: flex;
+    }
+
+    .image-section img {
+        width: 100%; /* Full width of card */
+        height: auto; /* Let the image maintain its aspect ratio */
+        object-fit: cover; /* Keeps image aspect without distortion */
+    }
+
+    /* Center the third card to match the width of the two above it */
+    .card:nth-child(3) {
+        grid-column: 1 / -1; /* Makes the third card span both columns */
+        justify-self: center;
+    }
+}

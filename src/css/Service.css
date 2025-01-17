@@ -1,0 +1,224 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+  }
+  
+  body {
+    color: #ffffff;
+    background-color: #000000;
+    height: 100vh;
+  }
+  
+  .heading h1 {
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
+    text-shadow: 0 0 25px #F48F5D;
+  }
+  
+  .heading p {
+    font-size: 18px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container1 {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .container1 .box {
+    width: 320px;
+    position: relative;
+    background: transparent;
+    border: 2px solid #F48F5D;
+    padding: 100px 40px 60px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .container1 .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F48F5D;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    border-radius: 10%;
+  }
+  
+  .container1 .box:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  
+  .container1 .box h1 {
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    opacity: 0.1;
+    transition: 0.5s;
+    color: #F48F5D;
+  }
+  
+  .container1 .box:hover h1 {
+    opacity: 1;
+    color: #fff;
+    transform: translateY(-20px);
+  }
+  
+  .container1 .box h3 {
+    position: relative;
+    font-size: 2em;
+    color: #F48F5D;
+    transition: 0.5s;
+    margin-bottom: 10px;
+  }
+  
+  .container1 .box:hover h3 {
+    color: #fff;
+  }
+  
+  .container1 .box p {
+    position: relative;
+    font-size: 18px;
+    color: #555;
+    transition: 0.5s;
+  }
+  
+  .container1 .box:hover p {
+    color: #fff;
+  }
+  
+  /* Responsive Media Queries */
+  
+  /* Default: 3 cards per row for larger screens */
+  @media (min-width: 1200px) {
+    .container1 .box {
+      width: 30%; /* 3 cards in one row */
+    }
+  }
+  @media (max-width: 1200px) and (min-width: 1161px){
+    .container1 .box{
+        width: 45%;
+    }
+  }
+  /* 3 cards per row for 900px to 1200px */
+  @media (max-width: 1200px) and (min-width: 900px) {
+    .container1 .box {
+      width: 45%;
+    }
+  }
+  
+  /* 2 cards per row for 768px to 900px */
+  @media (max-width: 900px) and (min-width: 768px) {
+    .container1 .box {
+      width: 45%; /* 2 cards in one row */
+    }
+  }
+  
+  @media (max-width: 768px) and (min-width: 600px) {
+    .container1{
+        display: flex;
+        justify-content: center;
+    }
+    .container1 .box{
+        width: 60%;
+    }
+}
+  
+  /* 2 cards per row for 540px to 768px */
+  @media (max-width: 600px) and (min-width: 500px) {
+    .container1{
+        display: flex;
+        justify-content: center;
+    }
+    .container1 .box {
+      width: 65%;
+      
+    }
+  }
+  
+  /* 1 card per row for screens smaller than 540px */
+  @media (max-width: 500px) {
+    .container1 .box {
+      width: 100%; /* 1 card in one row */
+    }
+  }
+  @media (min-width: 1200px) {
+    .heading h1 {
+      font-size: 36px;
+    }
+  
+    .heading p {
+      font-size: 20px;
+    }
+  }
+  
+  /* Medium screens (900px - 1200px) */
+  @media (max-width: 1200px) and (min-width: 900px) {
+    .heading h1 {
+      font-size: 32px;
+    }
+  
+    .heading p {
+      font-size: 18px;
+    }
+  }
+  
+  /* Smaller medium screens (768px - 900px) */
+  @media (max-width: 900px) and (min-width: 768px) {
+    .heading h1 {
+      font-size: 28px;
+    }
+  
+    .heading p {
+      font-size: 16px;
+    }
+  }
+  
+  /* Small screens (540px - 768px) */
+  @media (max-width: 768px) and (min-width: 540px) {
+    .heading h1 {
+      font-size: 24px;
+    }
+  
+    .heading p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Extra small screens (below 540px) */
+  @media (max-width: 540px) {
+    .heading h1 {
+      font-size: 20px;
+      margin-top: 250px;
+    }
+  
+    .heading p {
+      font-size: 12px;
+    }
+  }

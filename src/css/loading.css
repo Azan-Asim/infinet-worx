@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Percentage styling */
+.percent {
+    font-size: 10rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    animation: slideUp 1s ease-out forwards;
+}
+
+.percent span {
+    font-size: 3rem; /* Smaller span font size */
+}
+
+/* Progress bar styling */
+.progress-bar {
+    width: 406px;
+    height: 26px;
+    background: #111;
+    border-radius: 13px;
+    padding: 3px;
+    box-sizing: border-box;
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+.progress {
+    height: 15px;
+    background: #F48F5D;
+    border-radius: 13px;
+}
+
+.text {
+    color: #fdb5ca;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    animation: blink 0.7s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .percent {
+        font-size: 8rem;
+    }
+    .percent span {
+        font-size: 2.5rem;
+    }
+    .progress-bar {
+        width: 350px;
+    }
+}
+
+@media (max-width: 900px) {
+    .percent {
+        font-size: 6rem;
+    }
+    .percent span {
+        font-size: 2rem;
+    }
+    .progress-bar {
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .percent {
+        font-size: 4rem;
+    }
+    .percent span {
+        font-size: 1.5rem;
+    }
+    .progress-bar {
+        width: 250px;
+    }
+    .progress {
+        height: 12px;
+    }
+}
+
+/* Animation for blinking text */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
