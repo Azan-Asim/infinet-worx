@@ -1,9 +1,10 @@
-import Home from './pages/Home';  // Renaming the import
+import React from 'react';
+import Home from './pages/Home';  
 
 function App() {
   return (
     <>
-      <Home />  // Use the renamed import here
+      <Home />  
     </>
   );
 }
