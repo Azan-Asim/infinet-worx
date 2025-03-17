@@ -1,6 +1,5 @@
 import React from 'react'
 import '../css/Image.css';
-import { motion } from 'framer-motion'; // Import motion from framer-motion
 import AboutUs from './About';
 
 const ImageSection = () => {

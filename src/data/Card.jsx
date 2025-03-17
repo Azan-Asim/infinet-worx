@@ -10,7 +10,7 @@ const Card = ({ image, title, description, alt }) =>{
     <div className="text-section">
       <h6><span>{title}</span></h6>
       <p>{description}</p>
-      <a href="#" className="buttons">Learn More <i className="fa-solid fa-arrow-turn-down"></i></a>
+      <a href="company" className="buttons">Learn More <i className="fa-solid fa-arrow-turn-down"></i></a>
     </div>
   </div>
 )}

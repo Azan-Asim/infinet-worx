@@ -24,22 +24,22 @@ const Footersection = () => {
           >
             Join the network today.
           </motion.h1>
-          <a href="#" className="buttons">
+          <a href="started" className="buttons">
             Get Started <FontAwesomeIcon icon={faArrowDown} style={{ marginLeft: '15px' }} />
           </a>
 
           <div className="link-row">
             <div className="main-links">
-              <a href="#" className="link">Developer & Companies</a>
-              <a href="#" className="link">Creature</a>
-              <a href="#" className="link">About Us</a>
-              <a href="#" className="link">Contact</a>
+              <a href="developer" className="link">Developer & Companies</a>
+              <a href="creature" className="link">Creature</a>
+              <a href="aboutus" className="link">About Us</a>
+              <a href="contact" className="link">Contact</a>
             </div>
             <div className="social-links">
-              <a href="#" className="link"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-              <a href="#" className="link"><FontAwesomeIcon icon={faInstagram} /></a>
-              <a href="#" className="link"><FontAwesomeIcon icon={faDiscord} /></a>
-              <a href="#" className="link"><FontAwesomeIcon icon={faGithub} /></a>
+              <a href="linkedinn" className="link"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+              <a href="instagram" className="link"><FontAwesomeIcon icon={faInstagram} /></a>
+              <a href="discord" className="link"><FontAwesomeIcon icon={faDiscord} /></a>
+              <a href="github" className="link"><FontAwesomeIcon icon={faGithub} /></a>
             </div>
           </div>
 

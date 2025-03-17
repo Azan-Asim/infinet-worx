@@ -36,10 +36,10 @@ const Contact = () => {
           </div>
           <h2 className="txt">Contact with us</h2>
           <ul className="sci">
-            <li><a href="#"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-            <li><a href="#"><FontAwesomeIcon icon={faXTwitter} /></a></li>
-            <li><a href="#"><FontAwesomeIcon icon={faInstagram} /></a></li>
-            <li><a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+            <li><a href="facebook"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+            <li><a href="twitter"><FontAwesomeIcon icon={faXTwitter} /></a></li>
+            <li><a href="instagram"><FontAwesomeIcon icon={faInstagram} /></a></li>
+            <li><a href="linkedinn"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
           </ul>
         </div>
         <div className="contactform">

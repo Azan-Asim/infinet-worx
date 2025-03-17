@@ -8,7 +8,7 @@ const Supersetion = () => {
     <>
     <div className="main-container">
       <div className="img">
-        <img src="./logo.png" alt="Image" />
+        <img src="./logo.png" alt="logo" />
       </div>
       <div className="work1">
         <h1>

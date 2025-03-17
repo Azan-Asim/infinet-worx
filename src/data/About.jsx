@@ -197,7 +197,7 @@ const AboutUs = () => {
         <div style={{ ...baseStyles.imgContainer, ...responsiveStyles.imgContainer }}>
           <img
             src="./arham.jpeg"
-            alt="Arham's profile image during a meeting"
+            alt="Arham's profile during a meeting"
             style={{ ...baseStyles.img, ...responsiveStyles.img }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -237,7 +237,7 @@ const AboutUs = () => {
           </div>
 
           <div className="btn-group1">
-            <a href="#" style={baseStyles.btn}>Resume &gt;</a>
+            <a href="resume" style={baseStyles.btn}>Resume &gt;</a>
           </div>
         </div>
       </div>
