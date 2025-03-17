@@ -20,7 +20,7 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 2rem 6rem 1rem 6rem;
+      padding: 1rem 3rem 1rem 3rem;
       position: fixed;
       top: 0;
       background: rgba(0, 0, 0, 0.7);
@@ -39,7 +39,9 @@
     padding-bottom: 5px;
   }
   .nav-links{
-    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .navbar a:hover {
     color: #F48F5D;
@@ -79,15 +81,15 @@
 .logo img {
   width: 50px; /* Adjust size as needed */
   height: 50px; /* Adjust size as needed */
-  transition: width 0.3s, height 0.3s; /* Smooth logo resizing */
-  margin-right: 10px; /* Space between logo and company name */
+  transition: width 0.3s, height 0.3s; /* Smooth logo resizing */ /* Space between logo and company name */
   animation: rotate 5s linear infinite; /* Add rotation animation */
+  color: #ffffff;
 }
 
 .company-name {
   color: #ffffff; /* Company name color */
   transition: opacity 0.3s; /* Smooth transition for appearance */
-  opacity: 0; /* Hidden by default */
+ 
 }
 
 .navbar.scrolled .company-name {
@@ -95,10 +97,6 @@
 }
 
 
-/* Hide company name by default */
-.company-name {
-  opacity: 0; /* Make it invisible initially */
-}
 .navbar.scrolled {
   background: #000000; /* Solid black when scrolled */
  

@@ -18,12 +18,13 @@ const AboutUs = () => {
   const baseStyles = {
     container: {
       width: '100%',
-      padding: '150px 0',
     },
     heading: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      width: '100%',
+      padding: '60px 0 20px 0',
       fontSize: '36px',
       fontWeight: 800,
       color: '#ffffff',
@@ -35,18 +36,15 @@ const AboutUs = () => {
       marginRight: '10px',
     },
     main: {
-      width: '1130px',
-      maxWidth: '95%',
-      margin: '0 auto',
+      width: '100%',
+      padding: '0 50px',
+      gap: '50px',
       display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-around',
     },
     imgContainer: {
       position: 'relative',
-      marginBottom: '130px',
-      width: '500px',
-      height: '400px',
+      width: '40%',
+      height: '500px',
       borderRadius: '30px',
       boxShadow: '0 0 25px #F48F5D',
       overflow: 'hidden',
@@ -59,7 +57,7 @@ const AboutUs = () => {
       transition: 'filter 0.5s, box-shadow 0.5s',
     },
     aboutText: {
-      width: '550px',
+      width: '60%',
       color: 'rgb(202, 199, 199)',
       letterSpacing: '1px',
       lineHeight: '28px',
@@ -99,6 +97,7 @@ const AboutUs = () => {
     if (windowWidth < 575) {
       return {
         main: {
+          display: 'flex',
           flexDirection: 'column',
           padding: '0 10px',
         },
@@ -109,14 +108,24 @@ const AboutUs = () => {
         },
         imgContainer: {
           ...baseStyles.imgContainer,
-          marginBottom: '20px',
+          width: '100%',
+          height: 'auto', // Allow height to adjust based on content
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
+        img: {
+          ...baseStyles.img,
+          width: '100%',
+          height: 'auto', // Ensure the image scales proportionally
+          maxHeight: '300px', // Limit the height for mobile view
         },
         aboutText: {
           ...baseStyles.aboutText,
           fontSize: '14px',
           lineHeight: '22px',
           width: '100%',
-          padding: '0 10px',
+          padding: '0 20px',
         },
         btn: {
           ...baseStyles.btn,
@@ -134,10 +143,18 @@ const AboutUs = () => {
           ...baseStyles.heading,
           fontSize: '28px',
         },
+        imgContainer: {
+          ...baseStyles.imgContainer,
+          marginBottom: '20px',
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
         aboutText: {
           ...baseStyles.aboutText,
           fontSize: '16px',
-          lineHeight: '24px',
+          width: '100%',
           textAlign: 'justify',
         },
         btn: {
@@ -153,7 +170,7 @@ const AboutUs = () => {
           textAlign: 'center',
         },
         img: {
-          maxWidth: '400px',
+          ...baseStyles.img,
           width: '100%',
         },
       };
@@ -177,11 +194,11 @@ const AboutUs = () => {
       </div>
 
       <div style={{ ...baseStyles.main, ...responsiveStyles.main }}>
-        <div style={baseStyles.imgContainer}>
+        <div style={{ ...baseStyles.imgContainer, ...responsiveStyles.imgContainer }}>
           <img
-            src="./meeting.png"
-            alt="Abuzar's profile image during a meeting"
-            style={baseStyles.img}
+            src="./arham.jpeg"
+            alt="Arham's profile image during a meeting"
+            style={{ ...baseStyles.img, ...responsiveStyles.img }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           />
@@ -189,11 +206,12 @@ const AboutUs = () => {
 
         <div style={{ ...baseStyles.aboutText, ...responsiveStyles.aboutText }}>
           <p>
-            At [Your Software House Name], we're passionate about leveraging technology to build powerful, intuitive
-            solutions that drive business success. Since our inception, we’ve been dedicated to helping clients across
-            industries harness the potential of cutting-edge software and digital tools. Our talented team of developers,
-            designers, and strategists brings deep expertise and innovative thinking to every project, delivering
-            high-quality, reliable, and scalable software solutions.
+            At Infinet Worx, we're passionate about leveraging technology to build powerful,
+            intuitive solutions that drive business success. Since our inception, we’ve been
+            dedicated to helping clients across industries harness the potential of cutting-edge
+            software and digital tools. Our talented team of developers, designers, and strategists
+            brings deep expertise and innovative thinking to every project, delivering high-quality,
+            reliable, and scalable software solutions.
           </p>
 
           <h5 style={{ color: 'white', letterSpacing: '2px', fontSize: '30px', marginBottom: '5px' }}>What We Are</h5>

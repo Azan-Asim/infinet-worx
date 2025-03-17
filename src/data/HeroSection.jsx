@@ -14,17 +14,19 @@ const HeroSection = () => {
                 <source src="./video.mp4" type="video/mp4" />
             </video>
             <div className="content">
-            <h1>
-                <span>Welcome to the<br /></span> 
-                future<br /> of the internet
+            <h1 className="hero-title">
+              Welcome to the future of the internet
             </h1>
-            <div className="par">
+            <div className="hero-paragraph">
                 <p>
                     INFINETWORX is a decentralized network and digital space that empowers individuals to connect, create, collaborate, and share in a multiplayer digital economy.
                 </p>
-                <a href="#" className="buttons">
-                    Get Started <FaArrowDown style={{ color: "#ffffff", marginLeft: "15px" }} />
+             <div className="btn-container">
+             <a href="#" className="btn"> 
+                  <span>  Get Started </span>
+                    <FaArrowDown />
                 </a>
+             </div>
             </div>
             </div>
         </div>

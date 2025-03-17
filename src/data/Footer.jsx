@@ -1,11 +1,10 @@
 import React from 'react';
 import '../css/Footer.css';
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedinIn, faInstagram, faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { MdMargin } from 'react-icons/md';
 
 library.add(faLinkedinIn, faInstagram, faDiscord, faGithub, faArrowDown);
 
@@ -26,7 +25,7 @@ const Footersection = () => {
             Join the network today.
           </motion.h1>
           <a href="#" className="buttons">
-            Get Started <FontAwesomeIcon icon={faArrowDown} style={{marginLeft: '15px'} } />
+            Get Started <FontAwesomeIcon icon={faArrowDown} style={{ marginLeft: '15px' }} />
           </a>
 
           <div className="link-row">

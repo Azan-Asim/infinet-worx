@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     background-color: transparent; 
+    background-color: transparent;
     font-family: 'Cabin', sans-serif;
 }
 
@@ -16,12 +16,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
 }
 
 /* Background video styling */
 .footer {
-    position: relative; /* This allows the absolutely positioned video to be contained within the footer */
+    position: relative;
     z-index: 1;
     color: #ffffff;
     display: flex;
@@ -29,29 +28,26 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh; /* Adjust as needed for your design */
-    padding-top: 180px; /* Ensure this accommodates your layout */
+    height: 100vh;
+    padding-top: 180px;
 }
 
 .background-video {
-    position: absolute; /* Change to absolute */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Make sure it covers the footer area */
-    height: 100%; /* Adjust if necessary to fit the footer */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    z-index: -1; /* Keep it behind other content */
-    opacity: 0.7; /* Adjust to make the video darker or lighter */
+    z-index: -1;
+    opacity: 0.7;
 }
 
-
-
 .footer h1 {
-    display: flex;
-    justify-content: center;
     font-size: 60px;
     margin-bottom: 50px;
     z-index: 100;
+    text-shadow: 0 0 15px rgba(244, 143, 93, 0.8);
 }
 
 .buttons {
@@ -59,85 +55,79 @@ body {
     color: #ffffff;
     background: transparent;
     padding: 10px 20px;
+    border: 2px solid #F48F5D;
     border-radius: 25px;
     cursor: pointer;
     text-decoration: none;
-    justify-content: center;
-    display: flex;
-    position: relative;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     margin-bottom: 70px;
 }
 
 .buttons:hover {
-    color: #F48F5D;
-}
-
-.buttons::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.3s ease;
-}
-
-.buttons:hover::after {
-    width: 10%;
-}
-
-i {
-    margin-left: 10px;
+    background-color: #F48F5D;
+    color: #000;
+    box-shadow: 0 0 25px rgba(244, 143, 93, 0.8);
 }
 
 /* Link Row Styling */
 .link-row {
     display: flex;
-    padding: 10px;
-    margin: 0 4rem 2rem 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
 }
 
-/* Main Links - 60% Width */
+/* Main Links */
 .main-links {
-    width: 70%;
     display: flex;
-    gap: 4rem;
-    justify-content: space-around;
+    gap: 2rem;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .link {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-    text-align: center;
     transition: color 0.3s;
-    font-size: 17px;
 }
 
 .link:hover {
     color: #F48F5D;
 }
 
-/* Social Links - 40% Width */
+/* Social Links */
 .social-links {
-    width: 30%;
     display: flex;
-    gap: 25px;
-    padding-left: 100px;
+    gap: 1.5rem;
+    padding-top: 20px;
+
 }
 
+.social-links .link {
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links .link:hover {
+    color: #F48F5D;
+    transform: scale(1.2);
+}
+
+/* Container Styling */
 .container {
-    display: flex;              
-    align-items: center;        
-    margin-top: 40px;           
-    padding: 2rem 6rem;         
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    padding: 2rem 6rem;
 }
 
 .img {
-    margin-right: 20px;         
+    margin-right: 20px;
 }
 
 .container h1 {
@@ -146,48 +136,35 @@ i {
 }
 
 .img img {
-    height: 200px;              
-    animation-name: slideInFromBottom; 
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-}
-
-.text h1 {
-    margin: 0;                  
-    font-size: 2rem;           
-    display: flex; 
-    text-shadow: 0 0 25px #F48F5D;
-    margin-top: 50px;
+    height: 200px;
+    animation: slideInFromBottom 4s forwards;
 }
 
 @keyframes slideInFromBottom {
     from {
-        transform: translateY(100%); 
-        opacity: 0; 
+        transform: translateY(100%);
+        opacity: 0;
     }
     to {
-        transform: translateY(0); 
-        opacity: 1; 
+        transform: translateY(0);
+        opacity: 1;
     }
 }
+
+/* Responsive Design */
 @media (max-width: 1024px) {
     .footer h1 {
         font-size: 3rem;
-        margin-bottom: 30px;
     }
 
     .buttons {
         font-size: 1rem;
         padding: 10px 20px;
-        border: 1px solid #F48F5D;
-        margin-bottom: 50px;
     }
 
     .container {
         flex-direction: column;
-        align-items: center;
         padding: 1.5rem 4rem;
-        margin-top: 20px;
     }
 
     .container h1 {
@@ -199,53 +176,52 @@ i {
     }
 
     .link-row {
-       
         gap: 1rem;
     }
 
-    .main-links, .social-links {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
+    .main-links{
+        padding-top: 20px;
     }
-
-    .link {
-        font-size: 1rem;
+    .social-links {
+        gap: 1.5rem;
+     padding-top: 20px;   
     }
 }
 
 @media (max-width: 768px) {
     .footer h1 {
         font-size: 2rem;
-        margin-bottom: 20px;
     }
 
     .buttons {
         font-size: 0.9rem;
         padding: 8px 16px;
-        border: 1px solid #F48F5D;
     }
 
     .container h1 {
         font-size: 2.5rem;
-        margin-top: 20px;
     }
 
     .img img {
         height: 100px;
     }
+
     .link-row {
-        grid-template-columns: repeat(4, 1fr); /* Two columns on smaller screens */
-        grid-template-rows: repeat(2, 1fr); /* Four rows for eight links */
-        gap: 0;
-        display: grid;
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .main-links, .social-links {
+    .main-links {
         flex-direction: column;
         align-items: center;
+        padding-top: 20px;
+    }
+
+    .social-links {
         gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        display: flex   ;
     }
 }
 
@@ -257,7 +233,6 @@ i {
     .buttons {
         font-size: 0.8rem;
         padding: 6px 12px;
-        border: 1px solid #F48F5D;
     }
 
     .container h1 {
@@ -268,12 +243,7 @@ i {
         height: 80px;
     }
 
-    .main-links, .social-links {
-        gap: 0.5rem;
+    .link {
+        font-size: 14px;
     }
-    .link-row {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
-        grid-template-rows: repeat(4, auto); /* Four rows for eight links */
-        gap: 0;
-}
 }

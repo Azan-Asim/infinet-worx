@@ -6,7 +6,7 @@ import AboutUs from './About';
 const ImageSection = () => {
   return (
     <>
-    <section className="container">
+    {/* <section className="container">
       <div className="img">
         <img src="./logo.png" alt="FORMLESS" />
       </div>
@@ -18,7 +18,7 @@ const ImageSection = () => {
             transition={{ ease: "easeInOut", duration: 0.4, delay: 0.4 }}
           >INFINETWORX</motion.h1>
       
-    </section>
+    </section> */}
     <AboutUs/>
     </>
   )
