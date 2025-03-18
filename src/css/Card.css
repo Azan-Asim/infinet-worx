@@ -34,7 +34,7 @@
     display: flex; /* Flexbox for horizontal layout */
     gap: 20px; /* Space between cards */
     justify-content: center;
-    margin-top: 100px;
+    /* margin-top: 100px; */
   }
   .card {
     background-color: #222;
@@ -64,14 +64,19 @@
   }
   .text-section {
     flex: 1; 
-    padding: 10px; /* Padding for text */
+    padding: 10px; 
+    display: flex; /* Add display flex */
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center text vertically */
+    gap: 10px; /* Space between elements */
     
    
     background-color: black;
   }
   .text-section h6{
   width: 70px;
-  font-size: 2rem;
+  font-size: 20px;
+  font-weight: bolder;
   font-weight: 100;
   margin: 0;
   
@@ -119,7 +124,7 @@
   }
   
   .buttons {
-  margin-top: 30px;
+  /* margin-top: 50px; */
   font-size: 16px; /* Font size for button */
   color: #ffffff; /* Text color */
   background: transparent; /* Background color */

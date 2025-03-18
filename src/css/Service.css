@@ -12,13 +12,14 @@
     height: 100vh;
   }
   .heading{
-    padding-bottom: 20px;
+    padding: 20px 20px;
   }
   
   .heading h1 {
     font-size: 30px;
     justify-content: center;
     display: flex;
+    margin-top: 20px;
     margin-bottom: 10px;
     text-shadow: 0 0 25px #F48F5D;
   }
@@ -45,15 +46,16 @@
   grid-template-columns: auto auto auto;
     gap: 20px;
     justify-content: space-between;
+    padding: 0 20px;
   }
   
   .container1 .box {
-    width: auto;
+    width: 100%;
     height: auto;
     position: relative;
     background: transparent;
     border: 2px solid #F48F5D;
-    /* padding: 100px 40px 60px; */
+    padding: 100px 40px 60px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
     border-radius: 10%;
     margin-bottom: 20px;
@@ -202,6 +204,8 @@
   @media (min-width: 1200px) {
     .heading h1 {
       font-size: 36px;
+      margin-top: 20px;
+margin-bottom: 10px;
     }
   
     .heading p {
@@ -213,6 +217,8 @@
   @media (max-width: 1200px) and (min-width: 900px) {
     .heading h1 {
       font-size: 32px;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
   
     .heading p {
@@ -224,6 +230,8 @@
   @media (max-width: 900px) and (min-width: 768px) {
     .heading h1 {
       font-size: 28px;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
   
     .heading p {
@@ -235,6 +243,8 @@
   @media (max-width: 768px) and (min-width: 540px) {
     .heading h1 {
       font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
   
     .heading p {
@@ -253,7 +263,8 @@
   @media (max-width: 540px) {
     .heading h1 {
       font-size: 20px;
-      margin-top: 250px;
+      margin-top: 20px;
+margin-bottom: 10px;
     }
     .mission{
       display: flex;
@@ -270,6 +281,8 @@
   
     .heading p {
       font-size: 12px;
+      width: 100%;
+      text-align: center;
     }
   }
   @media (max-width: 600px) {
@@ -292,7 +305,7 @@
       width: 100%;
     }
     .heading{
-      padding: 0 20px;
+      padding: 20px 20px;
     }
   }
   

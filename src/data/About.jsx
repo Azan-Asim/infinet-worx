@@ -1,246 +1,187 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const AboutUs = () => {
-  const [isHovered, setIsHovered] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+    const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const baseStyles = {
-    container: {
-      width: '100%',
-    },
-    heading: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '100%',
-      padding: '60px 0 20px 0',
-      fontSize: '36px',
-      fontWeight: 800,
-      color: '#ffffff',
-      textShadow: '0 0 25px #F48F5D',
-    },
-    headingIcon: {
-      color: '#F48F5D',
-      fontSize: '45px',
-      marginRight: '10px',
-    },
-    main: {
-      width: '100%',
-      padding: '0 50px',
-      gap: '50px',
-      display: 'flex',
-    },
-    imgContainer: {
-      position: 'relative',
-      width: '40%',
-      height: '500px',
-      borderRadius: '30px',
-      boxShadow: '0 0 25px #F48F5D',
-      overflow: 'hidden',
-    },
-    img: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      filter: isHovered ? 'grayscale(0%)' : 'grayscale(100%)',
-      transition: 'filter 0.5s, box-shadow 0.5s',
-    },
-    aboutText: {
-      width: '60%',
-      color: 'rgb(202, 199, 199)',
-      letterSpacing: '1px',
-      lineHeight: '28px',
-      fontSize: '18px',
-      marginBottom: '45px',
-      textAlign: 'justify',
-    },
-    btn: {
-      display: 'inline-block',
-      padding: '1rem 2.5rem',
-      backgroundColor: '#F48F5D',
-      boxShadow: '0 0 25px #F48F5D',
-      borderRadius: '1.5rem',
-      fontSize: '1.6rem',
-      color: 'black',
-      border: '2px solid transparent',
-      letterSpacing: '0.1rem',
-      fontWeight: 600,
-      transition: '0.3s ease-in-out',
-      cursor: 'pointer',
-      marginTop: '20px',
-    },
-    contactInfo: {
-      marginTop: '10px',
-      marginBottom: '20px',
-      fontSize: '16px',
-      color: '#fff',
-    },
-    link: {
-      color: '#F48F5D',
-      textDecoration: 'none',
-      marginLeft: '5px',
-    },
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
   };
 
-  const getResponsiveStyles = () => {
-    if (windowWidth < 575) {
-      return {
-        main: {
-          display: 'flex',
-          flexDirection: 'column',
-          padding: '0 10px',
-        },
-        heading: {
-          ...baseStyles.heading,
-          marginBottom: '50px',
-          textAlign: 'center',
-        },
-        imgContainer: {
-          ...baseStyles.imgContainer,
-          width: '100%',
-          height: 'auto', // Allow height to adjust based on content
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        },
-        img: {
-          ...baseStyles.img,
-          width: '100%',
-          height: 'auto', // Ensure the image scales proportionally
-          maxHeight: '300px', // Limit the height for mobile view
-        },
-        aboutText: {
-          ...baseStyles.aboutText,
-          fontSize: '14px',
-          lineHeight: '22px',
-          width: '100%',
-          padding: '0 20px',
-        },
-        btn: {
-          ...baseStyles.btn,
-          fontSize: '1.4rem',
-          padding: '0.4rem 1rem',
-        },
-      };
-    } else if (windowWidth < 895) {
-      return {
-        main: {
-          flexDirection: 'column',
-          padding: '0 20px',
-        },
-        heading: {
-          ...baseStyles.heading,
-          fontSize: '28px',
-        },
-        imgContainer: {
-          ...baseStyles.imgContainer,
-          marginBottom: '20px',
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        },
-        aboutText: {
-          ...baseStyles.aboutText,
-          fontSize: '16px',
-          width: '100%',
-          textAlign: 'justify',
-        },
-        btn: {
-          ...baseStyles.btn,
-          fontSize: '1.4rem',
-        },
-      };
-    } else if (windowWidth < 921) {
-      return {
-        main: {
-          flexDirection: 'column',
-          alignItems: 'center',
-          textAlign: 'center',
-        },
-        img: {
-          ...baseStyles.img,
-          width: '100%',
-        },
-      };
-    } else if (windowWidth < 1285) {
-      return {
-        main: {
-          flexDirection: 'row',
-        },
-      };
-    }
-    return { main: {} };
+  const slideIn = {
+    hidden: { x: -50, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, ease: 'easeOut' } }
   };
 
-  const responsiveStyles = getResponsiveStyles();
+  const imageAnimation = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: { scale: 1, opacity: 1, transition: { duration: 1.2, ease: 'easeOut' } }
+  };
 
   return (
-    <section style={baseStyles.container} id='about'>
-      <div style={baseStyles.heading}>
-        <i className='bx bxs-user' style={baseStyles.headingIcon} aria-label="User Icon"></i>
-        <h2>About <span style={{ color: '#F48F5D' }}>Us</span></h2>
-      </div>
+    <section className="about-container" id="about">
+      <motion.div className="about-heading" variants={fadeIn} initial="hidden" animate="visible">
+        <i className="bx bxs-user about-icon"></i>
+        <h2>About <span>Us</span></h2>
+      </motion.div>
 
-      <div style={{ ...baseStyles.main, ...responsiveStyles.main }}>
-        <div style={{ ...baseStyles.imgContainer, ...responsiveStyles.imgContainer }}>
-          <img
-            src="./arham.jpeg"
-            alt="Arham's profile during a meeting"
-            style={{ ...baseStyles.img, ...responsiveStyles.img }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          />
-        </div>
-
-        <div style={{ ...baseStyles.aboutText, ...responsiveStyles.aboutText }}>
+      <motion.div className="about-content" variants={slideIn} initial="hidden" animate="visible">
+        <div className="about-text">
           <p>
-            At Infinet Worx, we're passionate about leveraging technology to build powerful,
+            At <b>Infinet Worx</b>, we're passionate about leveraging technology to build powerful,
             intuitive solutions that drive business success. Since our inception, we’ve been
             dedicated to helping clients across industries harness the potential of cutting-edge
-            software and digital tools. Our talented team of developers, designers, and strategists
-            brings deep expertise and innovative thinking to every project, delivering high-quality,
-            reliable, and scalable software solutions.
+            software and digital tools.
           </p>
 
-          <h5 style={{ color: 'white', letterSpacing: '2px', fontSize: '30px', marginBottom: '5px' }}>What We Are</h5>
+          <h5>What We Are</h5>
           <p>
             We are a diverse group of technology enthusiasts, problem-solvers, and creative minds committed to making a
-            difference. Our team combines years of experience with fresh perspectives, ensuring that every solution is
-            crafted to meet the unique needs of each client. We pride ourselves on our collaborative approach, transparency,
-            and commitment to excellence.
+            difference. Our team combines years of experience with fresh perspectives, ensuring every solution meets
+            the unique needs of each client.
           </p>
 
-          <h5 style={{ color: 'white', letterSpacing: '2px', fontSize: '30px', marginBottom: '5px' }}>What We Do</h5>
+          <h5>What We Do</h5>
           <p>
             From custom software development and mobile applications to cloud solutions and digital transformation strategies,
-            we offer a comprehensive range of services to help businesses thrive in a digital world. Our process begins with
-            understanding your goals and challenges, enabling us to design solutions that align with your vision and provide
-            measurable results.
+            we offer a comprehensive range of services to help businesses thrive in a digital world.
           </p>
 
-          <div style={baseStyles.contactInfo}>
-            <p><strong>Email:</strong> <a href="mailto:info@infinetworx.co" style={baseStyles.link}>info@infinetworx.co</a></p>
+          <div className="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:info@infinetworx.co">info@infinetworx.co</a></p>
             <p><strong>Location:</strong> Level 3 KL Gateway 59200 Kuala Lumpur Malaysia</p>
-            <p><strong>Phone:</strong> <a href="tel:+62329358176" style={baseStyles.link}>+6 23 2935 8176</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+62329358176">+6 23 2935 8176</a></p>
           </div>
 
-          <div className="btn-group1">
-            <a href="resume" style={baseStyles.btn}>Resume &gt;</a>
-          </div>
+          <motion.a href="resume" className="about-btn" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            Resume &gt;
+          </motion.a>
         </div>
-      </div>
+
+        <motion.div className="about-img-container" variants={imageAnimation} initial="hidden" animate="visible">
+          <img src="./about/why-us.png" alt="Company profile" className="about-img" />
+        </motion.div>
+      </motion.div>
+
+      <style jsx>{`
+        .about-container {
+          width: 100%;
+          padding: 60px 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #121212;
+        }
+
+        .about-heading {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 36px;
+          font-weight: 800;
+          text-shadow: 0 0 25px #F48F5D;
+          margin-bottom: 40px;
+        }
+
+        .about-icon {
+          color: #F48F5D;
+          font-size: 45px;
+          margin-right: 10px;
+        }
+
+        .about-heading h2 span {
+          color: #F48F5D;
+        }
+
+        .about-content {
+          display: flex;
+          flex-direction: ${windowWidth < 895 ? 'column' : 'row'};
+          align-items: center;
+          justify-content: center;
+          max-width: 1200px;
+          width: 100%;
+          gap: 40px;
+        }
+
+        .about-text {
+          width: ${windowWidth < 895 ? '100%' : '50%'};
+          color: rgb(202, 199, 199);
+          font-size: 16px;
+          line-height: 1.8;
+          text-align: justify;
+          padding: 0 20px;
+        }
+
+        .about-text h5 {
+          color: white;
+          font-size: 20px;
+          margin-top: 20px;
+          letter-spacing: 2px;
+        }
+
+        .contact-info {
+          margin-top: 20px;
+          font-size: 14px;
+        }
+
+        .contact-info a {
+          color: #F48F5D;
+          text-decoration: none;
+          margin-left: 5px;
+        }
+
+        .about-btn {
+          display: inline-block;
+          padding: 1rem 2.5rem;
+          background-color: #F48F5D;
+          box-shadow: 0 0 25px #F48F5D;
+          border-radius: 1.5rem;
+          font-size: 1.6rem;
+          color: black;
+          font-weight: 600;
+          margin-top: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+          text-decoration: none;
+        }
+
+        .about-img-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: ${windowWidth < 895 ? '100%' : '50%'};
+          height: auto;
+        }
+
+        .about-img {
+          width: 100%;
+          max-width: 500px;
+          object-fit: cover;
+          // border-radius: 15px;
+          // box-shadow: 0 4px 10px rgba(255, 78, 48, 0.2);
+        }
+
+        @media (max-width: 895px) {
+          .about-text {
+            text-align: center;
+          }
+          .about-btn {
+            font-size: 1.4rem;
+            padding: 0.8rem 2rem;
+          }
+          .about-img-container {
+            margin-top: 30px;
+          }
+        }
+      `}</style>
     </section>
   );
 };

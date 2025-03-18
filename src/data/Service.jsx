@@ -29,7 +29,7 @@ function ServiceCard({ title, subtitle, description }) {
 // Mission Component containing all service cards
 function Mission() {
   return (
-    <div className="mission">
+   
       <div className="container1">
         <ServiceCard title="Technology" subtitle="Services" description="Designed to facilitate the use of technology by enterprises and end-users specializing in various fields." />
         <ServiceCard title="Artificial" subtitle="Technology" description="Artificial Technology refers to the simulation of human intelligence in machines and applications that are programmed." />
@@ -38,7 +38,7 @@ function Mission() {
         <ServiceCard title="Application" subtitle="Transition Services" description="Provides solutions to protect networks, devices, and data from unauthorized access or criminal use." />
         <ServiceCard title="Data" subtitle="Analysis" description="Helping businesses make informed decisions by analyzing trends and patterns in data." />
       </div>
-    </div>
+
   );
 }
 
