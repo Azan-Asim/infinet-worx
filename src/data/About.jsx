@@ -140,11 +140,10 @@ const AboutUs = () => {
 
         .about-btn {
           display: inline-block;
-          padding: 1rem 2.5rem;
+          padding: 8px;
           background-color: #F48F5D;
-          box-shadow: 0 0 25px #F48F5D;
           border-radius: 1.5rem;
-          font-size: 1.6rem;
+          font-size: 20px;
           color: black;
           font-weight: 600;
           margin-top: 20px;
