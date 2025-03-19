@@ -1,0 +1,141 @@
+/* General Styles */
+.testimonial-section {
+  text-align: center;
+  padding: 80px 40px;
+  width: 100%;
+  height: 660px;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* Ensure the section is a positioning context */
+  padding-bottom: 100px;
+}
+
+.testimonial-section:hover {
+  background-color: #F48F5D;
+}
+
+.testimonial-section h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #1C2762;
+}
+
+.testimonial-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Testimonial Card Styles */
+.testimonial-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  border: #F48F5D 2px solid;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rating {
+  font-size: 1.5rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.comment {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-size: 1rem;
+  color: #007bff;
+}
+
+.author strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #1C2762;
+}
+
+/* Custom Swiper Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 30px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: absolute; /* Position arrows absolutely within the section */
+  bottom: 20px; /* Position at the bottom */
+  z-index: 10; /* Ensure arrows are above other content */
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Position the arrows */
+.swiper-button-prev {
+  left: 20px; /* Adjust left position */
+}
+
+.swiper-button-next {
+  right: 20px; /* Adjust right position */
+}
+
+/* Swiper Pagination Styles */
+.swiper-pagination-bullet {
+  background: #007bff !important;
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .testimonial-section h1 {
+    font-size: 2rem;
+  }
+
+  .testimonial-section p {
+    font-size: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  /* Adjust arrow size and position for smaller screens */
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    bottom: 10px; /* Move arrows closer to the bottom */
+  }
+
+  .swiper-button-prev {
+    left: 10px; /* Adjust left position for mobile */
+  }
+
+  .swiper-button-next {
+    right: 10px; /* Adjust right position for mobile */
+  }
+}

@@ -4,6 +4,8 @@ import Loading from '../data/loading.jsx';
 import CardSection from '../data/CardSection.jsx'
 import HeroSection from '../data/HeroSection.jsx';
 import Navbar from '../data/Navbar.jsx';
+// import Testimonial from '../data/Testimonial.jsx';
+import TestimonialCom from '../data/TestimonialCom.jsx';
 import ProfileSection1 from '../data/Profile.jsx';
 import Footersection from '../data/Footer.jsx'
 
@@ -15,7 +17,6 @@ const Home = () => {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 3000);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -29,6 +30,8 @@ const Home = () => {
           <HeroSection />
           <CardSection />
           <ProfileSection1 />
+          {/* <Testimonial/> */}
+          <TestimonialCom/>
           <Footersection/>
         </div>
       )}
