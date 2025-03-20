@@ -148,8 +148,13 @@ color: #F48F5D;
       font-size: 14px;       /* Further reduce font size for paragraph */
       margin-top: 10px;      /* Adjust margin */
     }
+    .work h1 span b {
+      font-size: 3rem;
+      font-weight: 500;
+  color: #F48F5D;
+     
   }
-  
+}
   @media (max-width: 320px) {
     .work h1 {
       font-size: 1.5rem;     /* Further reduce font size for very small screens */

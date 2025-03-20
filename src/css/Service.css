@@ -301,6 +301,10 @@ margin-bottom: 10px;
       width: 100%;
       text-align: center;
     }
+    .services-main {
+      padding: 50px 20px;
+     
+    }
   }
   @media (max-width: 600px) {
     .container1 {
@@ -313,6 +317,10 @@ margin-bottom: 10px;
     .container1 .box {
       width: 80%; /* Adjust width to fit better on small screens */
       max-width: 400px; /* Optional: Prevents it from becoming too wide */
+    }
+    .services-main {
+      padding: 50px 20px;
+     
     }
     
     .mission {

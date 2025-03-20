@@ -13,6 +13,7 @@ body {
 /* Main Heading */
 .main-heading {
   text-align: center;
+  color: white;
 }
 
 .main-heading h1 {
