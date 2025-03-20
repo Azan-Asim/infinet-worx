@@ -3,20 +3,20 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Cabin', sans-serif;
-  background-color: transparent;
+   background-color: transparent; 
 }
 
 body {
   color: #ffffff;
   /* background-color: #000000; */
-  height: 100vh;
+  height: auto;
 }
 .background-video {
   position: absolute; /* Change to absolute */
   top: 0;
   left: 0;
   width: 100%; /* Make sure it covers the footer area */
-  height: 100%; /* Adjust if necessary to fit the footer */
+  height: auto; /* Adjust if necessary to fit the footer */
   object-fit: cover;
   z-index: -1; /* Keep it behind other content */
   opacity: 0.7; /* Adjust to make the video darker or lighter */
@@ -31,11 +31,11 @@ body {
   text-align: center;
   justify-content: center;
   gap: 20px;
-padding: 0 300px 0 300px;
+  padding: 200px 300px;
   flex-direction: column;
   align-items: center; 
   width: 100%; 
-  height: 100vh; 
+  height: auto; 
 
 
 }

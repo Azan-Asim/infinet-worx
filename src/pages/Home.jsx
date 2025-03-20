@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Formless.css';
-import Loading from '../data/loading.jsx';
-import CardSection from '../data/CardSection.jsx'
-import HeroSection from '../data/HeroSection.jsx';
-import Navbar from '../data/Navbar.jsx';
+import Loading from '../components/loading.jsx';
+import CardSection from '../components/CardSection.jsx'
+import HeroSection from '../components/HeroSection.jsx';
+import Navbar from '../components/Navbar.jsx';
 // import Testimonial from '../data/Testimonial.jsx';
-import TestimonialCom from '../data/TestimonialCom.jsx';
-import ProfileSection1 from '../data/Profile.jsx';
-import Footersection from '../data/Footer.jsx'
+import TestimonialCom from '../components/TestimonialCom.jsx';
+import ProfileSection1 from '../components/Profile.jsx';
+import Footersection from '../components/Footer.jsx'
+import Contact from '../components/Contact.jsx'
+import AboutUs from '../components/About.jsx';
+import Service from '../components/Service.jsx';
+import WorkSection from '../components/Worksection.jsx';
+
+
+
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,10 +35,14 @@ const Home = () => {
         <div>
           <Navbar />
           <HeroSection />
+          <AboutUs/>
+          <Service/>
+          <WorkSection/>
           <CardSection />
+          <TestimonialCom/>
           <ProfileSection1 />
           {/* <Testimonial/> */}
-          <TestimonialCom/>
+        <Contact/>
           <Footersection/>
         </div>
       )}

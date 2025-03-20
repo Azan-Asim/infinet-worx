@@ -8,27 +8,29 @@
   
   body {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #054071;
     height: 100vh;
   }
+  .services-main{
+    padding: 100px 60px;
+   
+  }
   .heading{
-    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 40px;
+    align-items: center;
   }
   
   .heading h1 {
-    font-size: 30px;
-    justify-content: center;
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 25px #F48F5D;
+    font-size: 40px;
+ color: #F48F5D;
   }
   
   .heading p {
     font-size: 18px;
-    justify-content: center;
-    display: flex;
-    margin-bottom: 15px;
   }
   
   .mission {
@@ -46,19 +48,19 @@
   grid-template-columns: auto auto auto;
     gap: 20px;
     justify-content: space-between;
-    padding: 0 40px;
+   
   }
   
   .container1 .box {
     width: 100%;
     height: auto;
     position: relative;
-    background: transparent;
+    background: white;
     border: 2px solid #F48F5D;
     padding: 100px 40px 60px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
-    border-radius: 10%;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
     transition: transform 0.3s;
   }
   
@@ -73,7 +75,7 @@
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.5s;
-    border-radius: 10%;
+    border-radius: 10px;
   }
   
   .container1 .box:hover::before {
@@ -128,10 +130,16 @@
     .container1 .box {
       width: 100%; /* 3 cards in one row */
     }
+    .services-main{
+      padding: 100px 60px;
+    }
   }
   @media (max-width: 1200px) and (min-width: 1161px){
     .container1 .box{
         width: 100%;
+    }
+    .services-main{
+      padding: 100px 20px;
     }
   }
   /* 3 cards per row for 900px to 1200px */
@@ -141,7 +149,7 @@
     }
     .services-main{
       width: 100%;
-  padding: 0 20px;
+  padding: 100px 60px;
     }
   }
   
@@ -152,7 +160,15 @@
     }
     .services-main{
       width: 100%;
-  padding: 0 20px;
+  padding: 60px 40px;
+    }
+    .heading{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 40px;
+      align-items: center;
     }
   }
   
@@ -164,8 +180,7 @@
 
     }
     .services-main{
-      width: 100%;
-  padding: 0 20px;
+      padding: 60px 30px;
     }
     .container1 .box{
         width: 100%;

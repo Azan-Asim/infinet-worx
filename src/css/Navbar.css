@@ -3,12 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+     background-color: transparent; 
     font-family: 'Cabin', sans-serif;
   }
   
   body {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #054071;
     height: 100vh;
   }
   header{
@@ -23,12 +24,12 @@
       padding: 1rem 3rem 1rem 3rem;
       position: fixed;
       top: 0;
-      background: rgba(0, 0, 0, 0.7);
+      background: black;
       z-index: 200;
       transition: background .3s ;
     }
     .navbar.scrolled {
-      background: #000000;
+      background: #054071;
     }
     .navbar a {
     font-size: 1rem;
@@ -75,6 +76,7 @@
   display: flex; /* Use flexbox for horizontal alignment */
   align-items: center; /* Center items vertically */
   font-size: 24px;
+  background-color: transparent;
   font-weight: bold;
 }
 
@@ -98,7 +100,7 @@
 
 
 .navbar.scrolled {
-  background: #000000; /* Solid black when scrolled */
+  background: #05407196; /* Solid black when scrolled */
  
 }
 
@@ -122,14 +124,14 @@
 /* Button */
 .button {
   font-size: 1rem;
-  color: white;
-  background-color: #F48F5D;
+  color: #F48F5D;
+  background-color: transparent;
   border: 2px solid #F48F5D;
   padding: 0.8rem 1.6rem;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 0 25px #F48F5D;
-  transition: background-color 0.5s, color 0.5s;
+  /* box-shadow: 0 0 25px #F48F5D; */
+  /* transition: background-color 0.5s, color 0.5s; */
 }
 
 .navbar.scrolled .button {
@@ -176,8 +178,7 @@
     }
     
     .button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 50px #F48F5D;
+   background-color: #F48F5D;
     }
   
   /* Fullscreen Overlay Menu */

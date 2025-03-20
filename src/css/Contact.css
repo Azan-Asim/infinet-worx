@@ -6,15 +6,14 @@
 }
 .contact1{
     position: relative;
-    min-height: 100vh;
+    height: auto;
     padding: 50px 100px;
     display: flex;
-    margin-top: 100px;
-    margin-bottom: 100px;
+   
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: black;
+    background-color: white;
 }
 .contact1 .content1{
     max-width: 800px;
@@ -22,13 +21,13 @@
 }
 .content1 h2{
     font-size: 3em;
-    color: white;
+    color: #F48F5D;
     font-weight: 500;
-    text-shadow: 0 0 25px #F48F5D;
+
   opacity: 1;
 }
 .content1 p{
-    color: #fff;
+    color: black;
     font-size: 1.1em;
     font-weight: 300;
 }
@@ -94,7 +93,7 @@
     flex-direction: column;
     margin-left: 20px;
     font-size: 1.1em;
-    color: #fff;
+    color: black;
     font-family: 300;
 }
 .text2 h3{
@@ -102,12 +101,11 @@
     color: #F48F5D;
 }
 .container2 .txt{
-    color: #fff;
+    color: black;
     margin-top: 50px;
     font-weight: 500;
-    border-left: 50px solid #F48F5D;
-    padding-left: 10px;
-    line-height: 1em;
+    /* padding-left: 10px;
+    line-height: 1em; */
 }
 .sci{
     position: relative;
@@ -119,7 +117,7 @@
     list-style: none;
 }
 .sci li a{
-    color: #fff;
+    color: black;
     font-size: 1.5em;
     transition: 0.25s;
 }
@@ -199,6 +197,21 @@ form .inputbox{
     margin: 10px 0;
     font-size: 1.1em;
     color: #fff;
+    transition: 0.5s;
+}
+.inputbox-btn-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+
+}
+.inputbox-btn-div btn{
+    font-size: large;
+    border-radius: 20px;
+    background-color: #F48F5D;
+    padding: 4px 8px;
     transition: 0.5s;
 }
 .inputbox input:focus ~ span,

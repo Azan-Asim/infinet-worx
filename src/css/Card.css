@@ -3,7 +3,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      background-color: #000000;
+      /* background-color: #000000; */
       font-family: 'cabin';
     }
 
@@ -16,7 +16,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      height: auto;
     
 
     }
@@ -49,7 +49,7 @@
   }
   .card-container:hover{
     transform: scale(1.05);
-  box-shadow: 0 0 25px #F48F5D;
+  /* box-shadow: 0 0 25px #F48F5D; */
   }
   .image-section {
   flex: 2;
@@ -141,7 +141,7 @@
   }
   .main-heading {
     text-align: center; /* Center text within the div */
-    margin-top: 250px;
+    /* margin-top: 250px; */
   }
   .main-heading h1 {
     font-size: 55px;
