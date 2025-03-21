@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Lottie from 'lottie-react';
+import animationData from './lottiefiles/about.json';
+
+
 
 const AboutUs = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -10,37 +14,33 @@ const AboutUs = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // const fadeIn = {
-  //   hidden: { opacity: 0, y: 50 },
-  //   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
-  // };
-
   const slideIn = {
     hidden: { x: -50, opacity: 0 },
     visible: { x: 0, opacity: 1, transition: { duration: 1, ease: 'easeOut' } }
   };
 
-  const imageAnimation = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { duration: 1.2, ease: 'easeOut' } }
+  const animationVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1.2, ease: 'easeOut' } }
   };
+    if (!animationData) {
+      console.error("Animation data is undefined");
+      return <p>Animation failed to load</p>;
+    }
+  
 
   return (
     <section className="about-container" id="about">
-      {/* <motion.div className="about-heading" variants={fadeIn} initial="hidden" animate="visible">
-        <i className="bx bxs-user about-icon"></i>
-       
-      </motion.div> */}
-
       <motion.div className="about-content" variants={slideIn} initial="hidden" animate="visible">
         <div className="about-text">
-        <h2 className="about-heading">About <span>Us</span></h2>
+          <h2 className="about-heading">About <span>Us</span></h2>
           <p>
-          At Infinet Worx, we empower businesses with secure, innovative, and scalable technology solutions. Our team of experts 
-          combines deep industry knowledge with cutting-edge digital tools to drive efficiency, growth, and transformation. <br /> <br />
-From strategy to implementation, we deliver end-to-end solutions, including custom software development, mobile applications,
- cloud services, and digital transformation strategies. With a commitment to reliability and innovation, we help organizations
-  navigate the evolving technology landscape with confidence.
+            At Infinet Worx, we empower businesses with secure, innovative, and scalable technology solutions. 
+            Our team of experts combines deep industry knowledge with cutting-edge digital tools to drive efficiency, growth, and transformation. 
+            <br /> <br />
+            From strategy to implementation, we deliver end-to-end solutions, including custom software development, 
+            mobile applications, cloud services, and digital transformation strategies. 
+            With a commitment to reliability and innovation, we help organizations navigate the evolving technology landscape with confidence.
           </p>
 
           <div className="contact-info">
@@ -49,13 +49,14 @@ From strategy to implementation, we deliver end-to-end solutions, including cust
             <p><strong>Phone:</strong> <a href="tel:+62329358176">+6 23 2935 8176</a></p>
           </div>
 
-          <motion.a href="resume" className="about-btn" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          {/* <motion.a href="resume" className="about-btn" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             Resume &gt;
-          </motion.a>
+          </motion.a> */}
         </div>
 
-        <motion.div className="about-img-container" variants={imageAnimation} initial="hidden" animate="visible">
-          <img src="./about/why-us.png" alt="Company profile" className="about-img" />
+        <motion.div className="about-animation-container" variants={animationVariants} initial="hidden" animate="visible">
+          {/* <Lottie animationData={animationData} className="about-animation" /> */}
+          <Lottie animationData={animationData} loop autoplay />
         </motion.div>
       </motion.div>
 
@@ -71,16 +72,9 @@ From strategy to implementation, we deliver end-to-end solutions, including cust
         }
 
         .about-heading {
-         
           color: #F48F5D;
           font-size: 36px;
           font-weight: 800;
-        }
-
-        .about-icon {
-          color: #F48F5D;
-          font-size: 45px;
-          margin-right: 10px;
         }
 
         .about-heading h2 span {
@@ -104,13 +98,6 @@ From strategy to implementation, we deliver end-to-end solutions, including cust
           line-height: 1.8;
           text-align: justify;
           padding: 0 20px;
-        }
-
-        .about-text h5 {
-          color: white;
-          font-size: 20px;
-          margin-top: 20px;
-          letter-spacing: 2px;
         }
 
         .contact-info {
@@ -138,7 +125,7 @@ From strategy to implementation, we deliver end-to-end solutions, including cust
           text-decoration: none;
         }
 
-        .about-img-container {
+        .about-animation-container {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -146,12 +133,9 @@ From strategy to implementation, we deliver end-to-end solutions, including cust
           height: auto;
         }
 
-        .about-img {
+        .about-animation {
           width: 100%;
           max-width: 500px;
-          object-fit: cover;
-          // border-radius: 15px;
-          // box-shadow: 0 4px 10px rgba(255, 78, 48, 0.2);
         }
 
         @media (max-width: 895px) {
@@ -162,7 +146,7 @@ From strategy to implementation, we deliver end-to-end solutions, including cust
             font-size: 1.4rem;
             padding: 0.8rem 2rem;
           }
-          .about-img-container {
+          .about-animation-container {
             margin-top: 30px;
           }
         }

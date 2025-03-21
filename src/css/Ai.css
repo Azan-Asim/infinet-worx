@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-    background-color: black;
+    /* background-color: black; */
     color: white;
 }
 
@@ -667,7 +667,7 @@ h1{
 }
 
 .buttons:hover {
-    color: #F48F5D;
+    color: #054071;
 }
 
 .buttons::after {
@@ -715,7 +715,7 @@ i {
 }
 
 .link:hover {
-    color: #F48F5D;
+    color: #054071;
 }
 
 /* Social Links - 40% Width */
@@ -739,7 +739,7 @@ i {
 
 .container4 h1 {
     font-size: 120px;
-    text-shadow: 0 0 25px #F48F5D;
+    text-shadow: 0 0 25px #054071;
 }
 
 .img1 img {
@@ -753,7 +753,7 @@ i {
     margin: 0;                  
     font-size: 2rem;           
     display: flex; 
-    text-shadow: 0 0 25px #F48F5D;
+    text-shadow: 0 0 25px #054071;
     margin-top: 50px;
 }
 
@@ -1083,7 +1083,7 @@ i {
     .buttons {
         font-size: 1rem;
         padding: 10px 20px;
-        border: 1px solid #F48F5D;
+        border: 1px solid #054071;
         margin-bottom: 50px;
     }
 
@@ -1128,7 +1128,7 @@ i {
     .buttons {
         font-size: 0.9rem;
         padding: 8px 16px;
-        border: 1px solid #F48F5D;
+        border: 1px solid #054071;
     }
 
     .container4 h1 {
@@ -1161,7 +1161,7 @@ i {
     .buttons {
         font-size: 0.8rem;
         padding: 6px 12px;
-        border: 1px solid #F48F5D;
+        border: 1px solid #054071;
     }
 
     .container4 h1 {

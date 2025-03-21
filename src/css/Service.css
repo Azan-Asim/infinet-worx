@@ -8,11 +8,12 @@
   
   body {
     color: #ffffff;
-    background-color: #054071;
     height: 100vh;
   }
   .services-main{
     padding: 100px 60px;
+    background-color: #F48F5D;
+
    
   }
   .heading{
@@ -26,7 +27,7 @@
   
   .heading h1 {
     font-size: 40px;
- color: #F48F5D;
+ color: #494E4F;
   }
   
   .heading p {
@@ -58,7 +59,7 @@
     height: auto;
     position: relative;
     background: white;
-    border: 2px solid #F48F5D;
+    border: 2px solid #494E4F;
     padding: 100px 40px 60px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -73,7 +74,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #F48F5D;
+    background: #494E4F;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.5s;
@@ -93,7 +94,7 @@
     font-weight: 800;
     opacity: 0.1;
     transition: 0.5s;
-    color: #F48F5D;
+    color: #494E4F;
   }
   
   .container1 .box:hover h1 {
@@ -105,7 +106,7 @@
   .container1 .box h3 {
     position: relative;
     font-size: 2em;
-    color: #F48F5D;
+    color: #494E4F;
     transition: 0.5s;
     margin-bottom: 10px;
   }

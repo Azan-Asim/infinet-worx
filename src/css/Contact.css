@@ -123,7 +123,7 @@
 }
 .sci li a:hover{
     color: #F48F5D;
-    filter: drop-shadow(0 0 5px #f48f5d);
+    filter: drop-shadow(0 0 5px #F48F5D);
 }
 .container2 .contactform{
     position: relative;
@@ -137,7 +137,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-conic-gradient(from var(--a),#f48f5d
+    background: repeating-conic-gradient(from var(--a),#F48F5D
     0%,#F48F5D 10%, transparent 10%, transparent 50%);
     animation: animate 6s linear infinite;
     animation-delay: -1.5s;
@@ -184,7 +184,7 @@ form .inputbox{
     margin: 10px 0;
     border: none;
     background: transparent;
-    border-bottom: 2px solid #f48f5d;
+    border-bottom: 2px solid #F48F5D;
     color: #fff;
     outline: none;
     resize: none;
@@ -218,13 +218,13 @@ form .inputbox{
  .inputbox textarea:focus ~ span,
  .inputbox input:valid ~ span,
  .inputbox textarea:valid ~ span{
-    color: #f48f5d;
+    color: #F48F5D;
     font-size: 0.9em;
     transform: translateY(-24px);
  }
  .inputbox input[type="submit"]{
     width: 100%;
-    background: #f48f5d;
+    background: #F48F5D;
     color: #222;
     border: none;
     cursor: pointer;

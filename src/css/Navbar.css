@@ -9,7 +9,7 @@
   
   body {
     color: #ffffff;
-    background-color: #054071;
+    background-color: #494E4F;;
     height: 100vh;
   }
   header{
@@ -29,7 +29,7 @@
       transition: background .3s ;
     }
     .navbar.scrolled {
-      background: #054071;
+      background: #494E4F;
     }
     .navbar a {
     font-size: 1rem;
@@ -43,6 +43,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
   }
   .navbar a:hover {
     color: #F48F5D;
@@ -100,7 +101,7 @@
 
 
 .navbar.scrolled {
-  background: #05407196; /* Solid black when scrolled */
+  background: #888f9086; /* Solid black when scrolled */
  
 }
 

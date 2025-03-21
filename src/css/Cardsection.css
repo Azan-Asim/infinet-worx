@@ -20,7 +20,7 @@ body {
   font-size: 36px;
   line-height: 1.3;
   font-weight: 700;
-  /* text-shadow: 0 0 25px #F48F5D; */
+  /* text-shadow: 0 0 25px #054071; */
 }
 
 /* Card Section */
@@ -29,6 +29,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 120px;
+  background-color: #F48F5D;
+
 } 
 
 /* Card Container */
@@ -45,7 +47,7 @@ body {
   flex: 1 1 300px; /* Ensures proper distribution */
   max-width: 360px; /* Prevents overly large cards */
   background: #121212;
-  border: 2px solid #F48F5D;
+  border: 2px solid #054071;
   padding: 20px 20px;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
@@ -66,7 +68,7 @@ body {
   margin-top: 20px;
   font-size: 22px;
   font-weight: 600;
-  color: #F48F5D;
+  color: #054071;
 }
 
 .card-container .card p {

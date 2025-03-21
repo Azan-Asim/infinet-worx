@@ -55,7 +55,7 @@ body {
     color: #ffffff;
     background: transparent;
     padding: 10px 20px;
-    border: 2px solid #F48F5D;
+    border: 2px solid #054071;
     border-radius: 25px;
     cursor: pointer;
     text-decoration: none;
@@ -64,7 +64,7 @@ body {
 }
 
 .buttons:hover {
-    background-color: #F48F5D;
+    background-color: #054071;
     color: #000;
     box-shadow: 0 0 25px rgba(244, 143, 93, 0.8);
 }
@@ -97,7 +97,7 @@ body {
 }
 
 .link:hover {
-    color: #F48F5D;
+    color: #054071;
 }
 
 /* Social Links */
@@ -114,7 +114,7 @@ body {
 }
 
 .social-links .link:hover {
-    color: #F48F5D;
+    color: #054071;
     transform: scale(1.2);
 }
 
@@ -132,7 +132,7 @@ body {
 
 .container h1 {
     font-size: 120px;
-    text-shadow: 0 0 25px #F48F5D;
+    text-shadow: 0 0 25px #054071;
 }
 
 .img img {
