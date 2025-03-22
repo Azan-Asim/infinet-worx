@@ -12,6 +12,7 @@ import Contact from '../components/Contact.jsx'
 import AboutUs from '../components/About.jsx';
 import Service from '../components/Service.jsx';
 import WorkSection from '../components/Worksection.jsx';
+// import Testing from '../components/Testing.jsx';
 
 
 
@@ -43,6 +44,7 @@ const Home = () => {
           <ProfileSection1 />
           {/* <Testimonial/> */}
         <Contact/>
+        {/* <Testing/> */}
           <Footersection/>
         </div>
       )}

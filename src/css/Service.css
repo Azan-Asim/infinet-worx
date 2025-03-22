@@ -62,7 +62,7 @@
     border: 2px solid #494E4F;
     padding: 100px 40px 60px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    /* border-radius: 4px; */
     margin-bottom: 40px;
     transition: transform 0.3s;
   }
@@ -78,7 +78,7 @@
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.5s;
-    border-radius: 10px;
+    /* border-radius: 4px; */
   }
   
   .container1 .box:hover::before {

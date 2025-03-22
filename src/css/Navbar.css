@@ -10,7 +10,7 @@
   body {
     color: #ffffff;
     background-color: #494E4F;;
-    height: 100vh;
+    /* height: 100vh; */
   }
   header{
     padding: 0 4rem 0 4rem;
@@ -319,7 +319,7 @@
   
   @media (min-width: 321px) and (max-width: 480px) {
     .navbar {
-      padding: 1.5rem; /* Maintain larger padding for tablets */
+      padding: 12px; /* Maintain larger padding for tablets */
     }
   
     .navbar .nav-links,
@@ -338,11 +338,15 @@
       align-items: center;
       gap: 1.5rem;
     }
+    .company-name {
+     display: none;
+     
+    }
   }
   
   @media (min-width: 481px) and (max-width: 768px) {
     .navbar {
-      padding: 1.5rem; /* Maintain larger padding for tablets */
+      padding: 12px; /* Maintain larger padding for tablets */
     }
   
     .navbar .nav-links,
@@ -364,7 +368,7 @@
   
   @media (min-width: 769px) and (max-width: 900px) {
     .navbar {
-      padding: 1.5rem; /* Maintain larger padding for tablets */
+      padding: 15px; /* Maintain larger padding for tablets */
     }
   
     .navbar .nav-links,
